@@ -74,7 +74,7 @@ Housing-Price-Regression/
 
 ## Notebooks
 
-### `01_eda.ipynb` — Exploratory Data Analysis
+### `01_eda.ipynb` - Exploratory Data Analysis
 - Target variable distribution + normality tests (D'Agostino-Pearson)
 - Missing value audit with domain interpretation
 - Skewness analysis across all 79 features
@@ -84,7 +84,7 @@ Housing-Price-Regression/
 - Neighborhood deep-dive: price tier + variability (CV) per neighborhood
 - Time trends: price by decade built, seasonality by month
 
-### `02_preprocessing.ipynb` — Feature Engineering & Preprocessing
+### `02_preprocessing.ipynb` - Feature Engineering & Preprocessing
 - Outlier removal (2 partial-sale transactions)
 - Domain-aware missing value imputation (most NAs = "no feature", not unknown)
 - `LotFrontage` imputed by neighborhood median (not global)
@@ -94,7 +94,7 @@ Housing-Price-Regression/
 - Skewness correction with `log1p` (75+ features transformed)
 - `RobustScaler` (chosen over StandardScaler for outlier robustness)
 
-### `03_modeling.ipynb` — Training & Ensemble
+### `03_modeling.ipynb` - Training & Ensemble
 - 5-fold CV comparison across 8 baseline models
 - Optuna Bayesian optimization (50 trials each for XGBoost + LightGBM)
 - Stacking ensemble: 5 base learners → Ridge meta-learner with `passthrough=True`
@@ -102,7 +102,7 @@ Housing-Price-Regression/
 - Weighted blend (XGB 30% + LGB 30% + Stack 25% + GBM 10% + Ridge 5%)
 - Prediction distribution comparison across models
 
-### `04_explainability.ipynb` — SHAP & Error Analysis
+### `04_explainability.ipynb` - SHAP & Error Analysis
 - SHAP TreeExplainer: global importance (top 25 features)
 - SHAP beeswarm: direction + magnitude for all features simultaneously
 - SHAP dependence plots: non-linear relationships for top 4 features
@@ -159,7 +159,7 @@ Run the notebooks **in order** (01 → 02 → 03 → 04). Each notebook saves ou
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) for details.
 
 ## Contact
 
