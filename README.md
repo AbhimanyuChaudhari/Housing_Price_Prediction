@@ -1,6 +1,6 @@
 # Housing Price Regression
 
-A research-grade regression project on the [Kaggle Ames Housing dataset](https://www.kaggle.com/c/house-prices-advanced-regression-techniques), built from scratch with a focus on understanding *why* prices are what they are — not just achieving a score.
+A research-grade regression project on the [Kaggle Ames Housing dataset](https://www.kaggle.com/c/house-prices-advanced-regression-techniques), built from scratch with a focus on understanding *why* prices are what they are not just achieving a score.
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square)
 ![XGBoost](https://img.shields.io/badge/XGBoost-tuned-orange?style=flat-square)
@@ -16,7 +16,7 @@ A research-grade regression project on the [Kaggle Ames Housing dataset](https:/
 |---|---|---|
 | Ridge (baseline) | ~0.1423 | Strong with log-transform |
 | Lasso | ~0.1441 | Useful for feature selection |
-| ElasticNet | ~0.1456 | — |
+| ElasticNet | ~0.1456 | - |
 | SVR | ~0.1380 | Slow, competitive |
 | Random Forest | ~0.1387 | Good baseline |
 | Gradient Boosting | ~0.1262 | Solid |
@@ -24,7 +24,7 @@ A research-grade regression project on the [Kaggle Ames Housing dataset](https:/
 | **LightGBM (tuned)** | **~0.1165** | Comparable to XGBoost |
 | **Stacking Ensemble** | **~0.1132** | Best overall |
 
-> RMSE is in log(SalePrice) space — 0.115 means ~±11.5% error on average.
+> RMSE is in log(SalePrice) space - 0.115 means ~±11.5% error on average.
 
 ---
 
@@ -32,7 +32,7 @@ A research-grade regression project on the [Kaggle Ames Housing dataset](https:/
 
 This isn't a tutorial notebook. It's a structured investigation:
 
-**EDA first, model second.** Nine visualizations before a single model is trained — target distribution, missing value audit, outlier detection, correlation analysis, neighborhood deep-dive, seasonality trends.
+**EDA first, model second.** Nine visualizations before a single model is trained - target distribution, missing value audit, outlier detection, correlation analysis, neighborhood deep-dive, seasonality trends.
 
 **Feature engineering with rationale.** 15 new features created, each with documented reasoning. `TotalSF` (all floor areas combined) consistently ranks in the top 3 features by SHAP importance — beating any individual floor area.
 
@@ -42,7 +42,7 @@ This isn't a tutorial notebook. It's a structured investigation:
 
 **SHAP explainability.** Global importance, beeswarm plots, dependence plots, and individual prediction waterfall charts for 3 representative houses.
 
-**Error analysis.** Not just R² — where does the model fail by price range, quality tier, and decade built? (Answer: luxury homes >$400K have systematically higher errors.)
+**Error analysis.** Not just R² - where does the model fail by price range, quality tier, and decade built? (Answer: luxury homes >$400K have systematically higher errors.)
 
 ---
 
@@ -116,7 +116,7 @@ Housing-Price-Regression/
 
 ## Key Findings
 
-**Feature engineering > model selection.** The jump from Ridge (0.142) to tuned XGBoost (0.116) is partly the model, but `TotalSF`, `QualxSF`, and `NeighborhoodTier` — all engineered features — consistently appear in the top 10 by both SHAP and permutation importance.
+**Feature engineering > model selection.** The jump from Ridge (0.142) to tuned XGBoost (0.116) is partly the model, but `TotalSF`, `QualxSF`, and `NeighborhoodTier` - all engineered features — consistently appear in the top 10 by both SHAP and permutation importance.
 
 **OverallQual is non-linear.** SHAP dependence plots reveal that each quality grade adds increasingly more value at the top end — going from grade 8 to 9 adds more than going from grade 5 to 6.
 
